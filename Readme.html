@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Habitude Documentation</title>
+<meta name="theme-color" content="#0f1318">
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--border:#d7e0ec;--text:#172033;--dim:#53627a;--faint:#7b8aa2;--accent:#2563eb;--code:#eef3fa}
+html[data-t=dark]{--bg:#0f1318;--card:#151a21;--border:#2a303a;--text:#f3f5f8;--dim:#a3adbd;--faint:#697486;--accent:#e5b04a;--code:#20252d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 48px}
+.wrap{max-width:760px;margin:auto}
+a{color:var(--accent)}
+h1{font-size:25px;line-height:1.3;margin:0 0 8px}
+h2{font-size:16px;color:var(--accent);margin:24px 0 10px}
+p,li{color:var(--dim);font-size:13.5px}
+li{margin-bottom:7px}
+strong{color:var(--text)}
+code{background:var(--code);padding:2px 6px;border-radius:5px;font-size:12px;overflow-wrap:anywhere}
+.back{display:inline-block;margin-bottom:24px;color:var(--faint);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:16px;box-shadow:0 2px 8px rgba(30,55,90,.06)}
+.tagline{font-weight:700;color:var(--accent);margin:0 0 6px}
+.updated{color:var(--faint);font-size:13px;margin-bottom:24px}
+.notice{border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin:12px 0;color:var(--dim);font-size:13px}
+ul{padding-left:22px}
+</style>
+<script>try{if(localStorage.getItem("habitude.theme.v1")!=="light")document.documentElement.dataset.t="dark"}catch(e){document.documentElement.dataset.t="dark"}</script>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="./index.html">‹ Back to Habitude</a>
+<div class="card">
+<h1>Habitude — Personal Habit &amp; Activity Tracker</h1>
+<p class="tagline">Build Consistency. Become Better.</p>
+<p><strong>Version 1.0.0 · Local-first · Mobile-friendly</strong></p>
+<p>Habitude helps you build consistency by recording daily activity statuses, adding a short daily note, and reviewing your progress over time. It runs in your browser and keeps your data on your device by default. Optional Google Drive synchronization is available when you explicitly connect and use it.</p>
+
+<h2>What Habitude does</h2>
+<ul>
+<li>Record each activity as <strong>Completed</strong>, <strong>Missed</strong>, or <strong>Not Entered</strong>.</li>
+<li>Add a daily note or mini journal for thoughts, reflections, small wins, and reminders.</li>
+<li>Manage your activity list: add, rename, reorder, activate, deactivate, and remove activities.</li>
+<li>Keep inactive activities in historical reports so earlier progress remains visible.</li>
+<li>Review progress using <strong>Day, Week, Month, Year,</strong> or <strong>Custom</strong> date ranges.</li>
+<li>Filter and search activities in Analysis.</li>
+<li>View a visual progress matrix with activity totals, percentages, and day totals.</li>
+<li>Select a date in the progress matrix to open that date in Home.</li>
+<li>Share or download the analysis report as a PNG image.</li>
+<li>Export the analysis report to CSV.</li>
+<li>Create a full JSON backup and restore it later.</li>
+<li>Export or import entries-only CSV files containing activity statuses and daily notes without replacing the activity master and settings.</li>
+<li>Switch between dark and light themes.</li>
+<li>Choose whether to allow pinch-zoom.</li>
+<li>Use the bottom navigation to move between Home, Analysis, Settings, and About while retaining each page's scroll position.</li>
+</ul>
+
+<h2>Recording a day</h2>
+<ol>
+<li>Open <strong>Home</strong> and select the date you want to record.</li>
+<li>For each active activity, choose <strong>Completed</strong>, <strong>Missed</strong>, or <strong>Not Entered</strong>.</li>
+<li>Add an optional daily note.</li>
+<li>Select <strong>Save day</strong>.</li>
+</ol>
+<p><strong>Not Entered</strong> means no status has been recorded for that activity on that date. It is different from <strong>Missed</strong>. Only active activities appear in Home; historical activities remain available in Analysis.</p>
+
+<h2>Understanding Analysis</h2>
+<p>Choose a reporting period:</p>
+<ul>
+<li><strong>Day</strong> — one date.</li>
+<li><strong>Week</strong> — the week containing the selected date.</li>
+<li><strong>Month</strong> — the selected calendar month.</li>
+<li><strong>Year</strong> — the selected calendar year.</li>
+<li><strong>Custom</strong> — a date range you choose.</li>
+</ul>
+<p>Use the activity filter or search box to focus the report. The progress matrix summarizes statuses across the selected dates and activities. Historical entries remain reportable after an activity is deactivated. Dates in the future are not included.</p>
+<p>Use <strong>Share PNG</strong> to share the visual report where the browser supports sharing, or <strong>Download PNG</strong> to save an image. The report can also be exported as CSV for spreadsheet analysis. The CSV export does not require Google Sheets.</p>
+
+<h2>Settings</h2>
+<h2>Activity</h2>
+<p>Manage the activity master and drag activities to change their order. Activating an activity makes it available for daily entry. Deactivating an activity hides it from Home without removing its history from Analysis. Renaming an activity updates the name displayed in historical reports while preserving its history.</p>
+<h2>Backup</h2>
+<p>Habitude provides two backup formats:</p>
+<ul>
+<li><strong>Full JSON backup / restore</strong> — includes activities, settings, daily entries, and notes. Restoring a JSON backup replaces the current local data after confirmation.</li>
+<li><strong>Entries CSV export / import</strong> — carries daily activity statuses and notes without replacing the activity master or app settings.</li>
+</ul>
+<p>The Analysis page also offers a CSV export of the currently selected report. Keep regular backups, especially before restoring data or resetting the app.</p>
+<p><strong>Reset App Data</strong> clears daily entries and custom settings on this device and restores the default activities and appearance settings. It does not delete a backup already stored in Google Drive.</p>
+
+<h2>Optional Google Drive synchronization</h2>
+<p>Habitude works locally without a Google account. Google Drive is contacted only when you explicitly connect and choose a synchronization action. Habitude uses a JSON file named <code>habitude-sync.json</code>; it does <strong>not</strong> use Google Sheets.</p>
+<ul>
+<li><strong>Connect Google Drive</strong> — authorize the app to access the Drive file it manages.</li>
+<li><strong>Sync now</strong> — compare local and Drive data and present the appropriate synchronization choices.</li>
+<li><strong>Upload local to Drive</strong> — upload the local data to Drive.</li>
+<li><strong>Restore Drive to local</strong> — replace local data with the Drive copy after confirmation.</li>
+<li><strong>Disconnect</strong> — disconnect the current Google Drive session.</li>
+</ul>
+<p>Sync compares local and Drive data against the last-synchronized snapshot when one is available. When both copies have changed, the app offers choices to resolve the difference. During a merge, daily records are matched by date and activity ID; for matching records with conflicting values, the local value is retained. For matching activity IDs, local activity settings take precedence.</p>
+<div class="notice"><strong>Important:</strong> Google Drive synchronization has not yet been verified end-to-end for this release. Test connection, upload, restore, and conflict handling with non-critical sample data before relying on it as your only backup. Keep a separate JSON backup.</div>
+<h2>Using Google Drive in your own hosted copy</h2>
+<p>If you host your own copy, configure a Google OAuth client for your deployment and authorize the exact website origin in your Google Cloud configuration. The OAuth client ID embedded in the source is deployment-specific; do not assume it will work for a different domain. Google sign-in requires an internet connection. Local recording and analysis remain available without Drive connectivity.</p>
+
+<h2>Privacy and local storage</h2>
+<p>Habitude stores activities, settings, daily statuses, notes, and synchronization metadata in the browser's local storage. Normal local use does not send this data to a Habitude application server. Your browser data may be lost if you clear site data, remove browser storage, or reset the app, so export backups regularly.</p>
+<p>When you use Google Drive synchronization, the data included in the synchronization file is sent to your connected Google Drive account. Use only an account and device you trust. Browser capabilities and sharing behaviour may vary by browser and operating system.</p>
+<p>See <a href="./privacy.html">Privacy Policy</a> and <a href="./terms.html">Terms of Service</a> if those companion documents are included in your hosted copy.</p>
+
+<h2>Running Habitude</h2>
+<ul>
+<li><strong>Use locally:</strong> Open the HTML file in a modern browser. Some browser features, including Google sign-in and installability, may require the app to be hosted over HTTPS.</li>
+<li><strong>Host it:</strong> Place the app HTML file on a static host such as GitHub Pages and open the published address in a supported browser.</li>
+<li><strong>Install:</strong> If the browser and hosting setup offer installation, use the browser's <strong>Install app</strong> or <strong>Add to Home screen</strong> option.</li>
+</ul>
+<p>Habitude is designed around a single HTML app file with embedded CSS and JavaScript. Google Drive sign-in requires internet access; local entry and analysis are designed to work without connecting to Google Drive.</p>
+
+<h2>Files</h2>
+<p>The main application is <code>Habitude_index_20261012_234800.html</code> in the current working version. For a repository deployment, you may name the published app file <code>index.html</code>. Keep the README files alongside the hosted app:</p>
+<ul>
+<li><code>index.html</code> (the published app file)</li>
+<li><code>Readme.md</code></li>
+<li><code>Readme.html</code></li>
+<li><code>privacy.html</code> and <code>terms.html</code> if supplied for the deployment</li>
+</ul>
+
+<h2>Version</h2>
+<p><strong>Habitude 1.0.0</strong></p>
+<p>Build Consistency. Become Better.</p>
+</div>
+</div>
+</body>
+</html>
