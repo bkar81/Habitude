@@ -1,0 +1,35 @@
+{
+  "name": "Habitude — Personal Habit & Activity Tracker",
+  "short_name": "Habitude",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "description": "Habitude — Build Consistency. Become Better.",
+  "icons": [
+    {
+      "src": "habitude-pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "habitude-pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "habitude-pwa-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
