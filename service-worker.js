@@ -2,7 +2,7 @@
 // Caches the app shell for offline use and supports the in-app update check.
 
 const CACHE_PREFIX = "habitude-cache-";
-const CACHE_NAME = CACHE_PREFIX + "v1.0.0";
+const CACHE_NAME = CACHE_PREFIX + "v1.0.1";
 
 const ASSETS = [
   "./",
